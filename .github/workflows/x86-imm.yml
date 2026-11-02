@@ -5,9 +5,9 @@ name: x86-imm
 on:
   # 手动执行
   workflow_dispatch:
-  # 避开整点，改成 UTC 00:15 (北京时间周一 08:15)
+  # 每周日北京时间 22:15 开始编译，为周一下载预留时间
   schedule:
-    - cron: '15 0 * * 1'
+    - cron: '15 14 * * 0'
 
 #CI权限
 permissions: write-all
